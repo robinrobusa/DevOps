@@ -1,8 +1,6 @@
 pipeline {
   agent any
-  tools {
-	  maven ‘Maven’
-  }
+  
   stages {
     stage('build') {
       when {
@@ -12,7 +10,7 @@ pipeline {
       }
       steps {
 		echo 'Building application...'
-	      	sh "mvn install"
+
       }
     }
     stage(‘deploy’) {
