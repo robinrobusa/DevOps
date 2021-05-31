@@ -1,6 +1,5 @@
 pipeline {
-  agent any
-  
+  agent any  
   stages {
     stage('build') {
       when {
@@ -9,13 +8,12 @@ pipeline {
         }
       }
       steps {
-		echo 'Building application...'
-
+        echo 'Building application...'
       }
     }
     stage(‘deploy’) {
       steps {
-		echo 'Deploying application…'
+        echo 'Deploying application…'
       }
     }
   }
